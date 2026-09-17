@@ -28,6 +28,7 @@ func readData(filename string) ([]float64, error) {
 	if err != nil {
 		return nil, err
 	}
+
 	return numbers, nil
 
 }

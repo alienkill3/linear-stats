@@ -16,5 +16,9 @@ func main() {
 		fmt.Fprintln(os.Stderr, "Error reading data:", err)
 		os.Exit(1)
 	}
+	if len(numbers) < 2 {
+		fmt.Fprintln(os.Stderr, "At least two numbers are required.")
+		os.Exit(1)
+	}
 	fmt.Println(numbers)
 }
