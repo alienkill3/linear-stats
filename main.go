@@ -28,5 +28,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(numbers, a, b, r)
+	fmt.Printf("Linear Regression Line: y = %.6fx + %.6f\n", a, b)
+	fmt.Printf("Pearson Correlation Coefficient: %.10f\n", r)
+
 }
