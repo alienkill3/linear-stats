@@ -20,5 +20,8 @@ func main() {
 		fmt.Fprintln(os.Stderr, "At least two numbers are required.")
 		os.Exit(1)
 	}
-	fmt.Println(numbers)
+
+	a, b := linearRegression(numbers)
+
+	fmt.Println(numbers, a, b)
 }
