@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -10,6 +11,7 @@ import (
 
 func readData(filename string) ([]float64, error) {
 	file, err := os.Open(filename)
+
 	if err != nil {
 		return nil, err
 	}
@@ -29,6 +31,10 @@ func readData(filename string) ([]float64, error) {
 
 		if err != nil {
 			return nil, fmt.Errorf("invalid number on line %d", lineNumber)
+		}
+		if math.IsNaN(number) || math.IsInf(number, 0) {
+			return nil, fmt.Errorf("invalid number on line %d: %s", lineNumber, line)
+
 		}
 		numbers = append(numbers, number)
 	}
