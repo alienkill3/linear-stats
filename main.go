@@ -22,6 +22,11 @@ func main() {
 	}
 
 	a, b := linearRegression(numbers)
+	r, err := pearson(numbers)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 
-	fmt.Println(numbers, a, b)
+	fmt.Println(numbers, a, b, r)
 }
