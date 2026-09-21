@@ -125,7 +125,6 @@ It practices:
 - Floating-point calculations.
 
 
-
 ## Testing with the Official Audit Tool
 
 Download and extract the official audit tool. In this example, its folder is named `stat-bin` and is located alongside the `linear-stats` project.
